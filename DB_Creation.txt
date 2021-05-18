@@ -1,8 +1,9 @@
 /*
-This creates the content table
-It has X,Y,Z. I chose content_name to be non null because …
-
+Creating a Netflix database and i created three tables under it 1. user table 2. content table 3. credit card details table
 */
+
+/* Content table has content id as the primary key, I kept the content name as non null,created a column as primary genre as there could be many genre and just want to highlight the main one */
+
 
 CREATE TABLE "Content" (
 	"Content_id"	TEXT,
@@ -13,4 +14,30 @@ CREATE TABLE "Content" (
 	PRIMARY KEY("Content_id")
 );
 
+/* In the user table I used email as non null unique. Added device, age ,sex,country  as to know which device is being used by which age group and who is watching and where is the content being watched.
 
+CREATE TABLE "User" (
+	"User_id"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL,
+	"Device"	TEXT,
+	"Email"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER NOT NULL,
+	"Sex"	TEXT,
+	"Subscription_Status"	TEXT NOT NULL,
+	"Country"	TEXT,
+	"Created_At"	TEXT,
+	PRIMARY KEY("User_id")
+);
+
+/* Credit card payement table with payement id as primar key. card expiration as non null
+
+CREATE TABLE "Credit_Card_Details" (
+	"Payment_id"	INTEGER,
+	"Card_Number"	TEXT NOT NULL,
+	"User_id"	INTEGER,
+	"Card_Expiration"	TEXT NOT NULL,
+	"Card_CVV"	INTEGER NOT NULL,
+	"Payment_Type"	TEXT NOT NULL,
+	FOREIGN KEY("User_id") REFERENCES "User"("User_id"),
+	PRIMARY KEY("Payment_id")
+);
