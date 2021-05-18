@@ -1,0 +1,16 @@
+/*
+This creates the content table
+It has X,Y,Z. I chose content_name to be non null because …
+
+*/
+
+CREATE TABLE "Content" (
+	"Content_id"	TEXT,
+	"Primary_Genre"	TEXT,
+	"Release_Year"	INTEGER,
+	"IMDB_Rating"	INTEGER,
+	"Content_name"	TEXT NOT NULL,
+	PRIMARY KEY("Content_id")
+);
+
+
