@@ -1,0 +1,27 @@
+	
+	-- Example of how to insert in the user table
+	
+	INSERT INTO  User ( User_id,Name,Device,Email,Age,Sex,Subscription_Status,Country,Created_At)
+	VALUES ('5','Drake','Laptop', 'Drake09@gmail.com','16','Male','Active','United States','10-05-2020 11:00:00');
+	
+	-- Example of how to insert in the content table with multiple rows via a single query
+	INSERT INTO Content (Primary_Genre, Release_Year, Content_name, IMDB_Rating)
+	VALUES 
+	("Horror","2010","Grudge","2.5"),
+	("Action","2012","Batman returns","8.9"),
+	("Comedy","2010","Hangover 2","7.5"),
+	("Romance","2018","La La Land","9.0"),
+	("Horror","2020","It","7.5"),
+	("SciFi","2012","Star Wars","8.3"),
+	("Comedy","2015","21 Jump street","6.5"),
+	("Thriller","2000","Knives Out","9.5")
+	
+	-- Example of how to insert in the Payment. Data like card number should never be stored in plain text for security reasons. We should store the encrypted details, 
+	-- However for simplicity we Will store plain text here
+	
+	INSERT INTO  Credit_Card_Details ( Card_Number, Card_Expiration, Card_CVV, Payment_Type, User_id)
+	VALUES 
+('4190987616523XXXX','10-08-2023','443', 'Visa','1'),
+('4100887916524XXXX','10-08-2023','443', 'Visa','2'),
+('8790987918723XXXX','10-08-2023','443', 'Visa','3'),
+('4160098776543XXXX','10-08-2023','443', 'Visa','4')
